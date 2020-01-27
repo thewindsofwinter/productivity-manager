@@ -1,0 +1,27 @@
+{
+  "name": "Strategic Taskmaster",
+  "version": "1.0",
+  "description": "An extension to encourage objective completion",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "options_page": "options.html",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/16logo.png",
+        "32": "images/32logo.png",
+        "48": "images/48logo.png",
+        "128": "images/128logo.png"
+      }
+    },
+    "icons": {
+      "16": "images/16logo.png",
+      "32": "images/32logo.png",
+      "48": "images/48logo.png",
+      "128": "images/128logo.png"
+    },
+  "manifest_version": 2
+}

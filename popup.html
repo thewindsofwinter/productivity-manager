@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                font-family: 'Raleway', Helvetica, sans-serif;
+                font-size: 0.8em;
+                min-width: 300px;
+                min-height: 485px;
+                line-height: 1.5;
+                background: linear-gradient(#EEE, #AAA);
+            }
+            .inline {
+                display: inline;
+                width: 200px;
+            }
+            .inlines {
+                display: inline;
+                width: 100px;
+            }
+            input {
+                border: 0px white solid;
+                border-bottom: 0.5px black dashed;
+                background-color: #FFFFFF00;
+                color: black;
+                padding: 2px;
+            }
+            input:active, input:focus {
+                font-family: monospace;
+                background-color: black;
+                color: green;
+            }
+            rect {
+                fill:blue;
+            }
+            h1 {
+                font-family: 'Lato', Arial, sans-serif;
+                font-size: 1.5em;
+                border-bottom: 1px black solid;
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Strategic Taskmaster</h1>
+        <div class="title">
+            Current Operational Plan: <input id="title" class="inlines" type="text" name="plan_now" value="Winter Wind"><br />
+
+            Current Timelines: <br />
+            <svg id = "timelines" width="300px" height="200px">
+            </svg>
+            <hr />
+        <div class="second">
+            Add New Objective Timeline:<br />
+
+            Name: <input class="inline" type="text" name="New Timeline" value="New Timeline"><br />
+            Start Time (days left): <input class="inlines" type="text" name="timeline_start" value=""><br />
+            End Time (days left): <input class="inlines" type="text" name="timeline_end" value=""><br /><br />
+
+            <button id="new_timeline" type="button" name="Create Timeline">Process Request</button><br />
+            <hr />
+        </div>
+        <div class="third">
+            Add New Objective Event:<br />
+
+            Name: <input class = "inline" type="text" name="New Event" value="New Event"><br />
+            Deadline (days left): <input class="inlines" type="text" name="event_deadline" value=""><br />
+            Timeline: <select id="dynfill"></select><br /><br />
+
+            <button id="new_event" type="button" name="Create Event">Process Request</button>
+        </div>
+        <script src="popup.js" charset="utf-8"></script>
+    </body>
+</html>
